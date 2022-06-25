@@ -1,0 +1,25 @@
+html
+    head
+        style.
+            #app{
+                color:red;
+                margin:50px;
+                font-size:30px;
+            }
+            .click-btn{
+                text-align: center;
+            }
+            .big-title{
+                margin-top: 40px;
+                font-size: 40px;
+                font-weight: 800;
+            }
+    body
+        //- ｊｓファイルで操作する要素を記述していく
+        .click-btn
+            .big-title パスワード自動生成アプリ（簡易バージョン）
+            #app ここに生成されたパスワードを表示する
+            button(id="btn") パスワードを生成する
+            input(id="inp" type="number" min="1" max="20" placeholder="桁数" value="8")
+        //- バンドルされたｊｓファイルとヒモ付する
+        script(src="app.bundle.js")
