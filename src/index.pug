@@ -14,12 +14,22 @@ html
                 font-size: 40px;
                 font-weight: 800;
             }
+            li{
+                margin: 10px auto;
+            }
     body
         //- ｊｓファイルで操作する要素を記述していく
         .click-btn
-            .big-title パスワード自動生成アプリ（簡易バージョン）
+            .big-title パスワード自動生成アプリ
+                |
+                br
+                |（簡易バージョン）
             #app ここに生成されたパスワードを表示する
             button(id="btn") パスワードを生成する
             input(id="inp" type="number" min="1" max="20" placeholder="桁数" value="8")
+        h2 使用方法
+        ol
+            li ボタンの横にあるボックスに1〜20までの数値を入力し生成するパスワードの桁数を指定してください（デフォルトは8桁）
+            li ボタンを押すことで大文字を含む英数字混合のパスワードを生成します
         //- バンドルされたｊｓファイルとヒモ付する
         script(src="app.bundle.js")
